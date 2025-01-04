@@ -4,16 +4,22 @@
 
 #logo {
   text-transform: uppercase;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-#logo:hover {
-  text-decoration: underline;
+#footer_logo {
+  text-transform: capitalize;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(198, 55, 55);
+    color: rgb(198, 55, 55);
+  }
 }
 
-
-#footer_logo:hover {
-  text-decoration: underline;
-  text-decoration-color: rgb(198, 55, 55);
-  color: rgb(198, 55, 55);
+#rails_img:hover {
+    transform: scale(1.2);
 }
+
 

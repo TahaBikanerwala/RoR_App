@@ -53,6 +53,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "minitest-reporters", "~> 1.1", ">= 1.1.11"
+  gem "rails-controller-testing"
 end
 
 group :development do
