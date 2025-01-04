@@ -10,3 +10,10 @@
   text-decoration: underline;
 }
 
+
+#footer_logo:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(198, 55, 55);
+  color: rgb(198, 55, 55);
+}
+

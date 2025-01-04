@@ -1,0 +1,12 @@
+<footer class="bg-gray-500 text-white p-0 fixed bottom-0 w-full">
+  <div class="mx-auto flex justify-between items-center">
+    <%= link_to "Ruby on Rails Tutorial", 'https://guides.rubyonrails.org/getting_started.html', id: "footer_logo", class: "text-xl font-bold hover:text-gray-600" %>
+    <nav class="p-2 rounded">
+      <ul class="flex space-x-2">
+        <li><%= link_to "About", '/static_pages/about', class: "rounded p-2 text-xl text-white hover:underline" %></li>
+        <li><%= link_to "Contact", '/static_pages/contact', class: "rounded p-2 text-xl text-white hover:underline" %></li>
+        <li><%= link_to "News", 'https://rubyonrails.org/blog/', class: "rounded p-2 text-xl text-white hover:underline" %></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
