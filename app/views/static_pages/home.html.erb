@@ -1,0 +1,16 @@
+<% provide(:title, "Home") %>
+<div class="bg-gray-100 p-6">
+  <h1 class="text-6xl font-bold mb-4 text-center">Welcome to the Sample App</h1>
+  <h2 class="text-3xl mb-4 text-center">
+    <p>This will lead you to 
+    <a href="https://rubyonrails.org/" target="_blank" class="text-blue-500 hover:underline font-semibold">Home Page
+    </a> of Ruby on Rails Website
+  </p>
+  </h2>
+  <div class="flex justify-center">
+    <%= link_to 'Sign up now!', "#", class: "text-center text-2xl mt-4 rounded-md p-2 bg-blue-500 text-white hover:bg-blue-700" %>
+  </div>
+</div>
+<div class="flex justify-center">
+  <%= link_to image_tag("rails_2.png", alt: "rails logo"), 'https://rubyonrails.org/', class: "align-center mt-4 hover:opacity-80" %>
+</div>
