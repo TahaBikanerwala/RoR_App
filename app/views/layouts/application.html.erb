@@ -22,12 +22,22 @@
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <%= render 'layouts/header'%>
-    <main class="bg-gray-100 mt-40">
+    <main class="bg-gray-100 mt-40 mb-10">
       <%= yield %>
     </main>
+    <% flash.each do |message_type, message| %>
+      <div>
+        <div class="bg-green-400 text-white px-4 py-2 border-t-4 border-green-400 rounded-b shadow-md mb-2" role="alert">
+          <div>
+            <p class="font-bold"><%= message_type.capitalize %></p>
+            <p class="text-sm"><%= message %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
     <%= render 'layouts/footer'%>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
