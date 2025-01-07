@@ -20,16 +20,18 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_importmap_tags %>
   </head>
   <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <%= render 'layouts/header'%>
     <main class="bg-gray-100 mt-40 mb-10">
-      <%= yield %>
-    </main>
-    <% flash.each do |message_type, message| %>
-      <div>
-        <div class="bg-green-400 text-white px-4 py-2 border-t-4 border-green-400 rounded-b shadow-md mb-2" role="alert">
+      <% flash.each do |message_type, message| %>
+      <% bg_color = message_type.to_sym == :danger ? "bg-red-500" : "bg-green-500" %>
+      <% border_color = message_type.to_sym == :danger ? "border-red-700" : "border-green-700" %>
+      <div class="my-10">
+        <div class="max-w-lg mx-auto <%= "#{bg_color} text-white px-4 py-3 #{border_color}" %>" role="alert">
           <div>
             <p class="font-bold"><%= message_type.capitalize %></p>
             <p class="text-sm"><%= message %></p>
@@ -37,6 +39,9 @@
         </div>
       </div>
     <% end %>
+      <%= yield %>
+    </main>
+    
     <%= render 'layouts/footer'%>
     <%= debug(params) if Rails.env.development? %>
   </body>
