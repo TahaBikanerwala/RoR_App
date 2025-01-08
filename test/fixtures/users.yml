@@ -3,5 +3,5 @@
 test:
   name: Test User
   email: test@test.com 
-  password_digest: <%= BCrypt::Password.create('password') %>
+  password_digest: <%= User.digest('password') %>
 
