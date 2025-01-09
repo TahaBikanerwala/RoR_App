@@ -11,7 +11,9 @@
 <h1 class="text-4xl font-bold mb-5 mt-5 ml-2">All Users</h1>
 <ul class="flex flex-col space-y-4 mb-5">
   <% @users.each do |user| %>
+    <% unless user.admin?%>
     <%= render 'users/user', user: user%>
+    <% end %>
   <% end %>
   <%#= render @users %> 
 </ul>
