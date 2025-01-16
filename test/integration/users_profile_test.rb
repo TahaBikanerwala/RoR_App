@@ -5,7 +5,6 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:test)
-
   end
 
   test "user profile" do
@@ -19,7 +18,4 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
       assert_match micropost.content, response.body
     end
   end
-
-  
-
 end
