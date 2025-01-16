@@ -12,3 +12,10 @@ User.create!(name: 'Example User', email: 'test@test.co', password: 'password',
                password_confirmation: password, activated: true,
                activated_at: Time.zone.now)
 end
+
+
+ users = User.order(:created_at).take(6)
+ 25.times do
+  content = Faker::Lorem.sentence(word_count: 5)
+  users.each { |user| user.microposts.create!(content: content, user_id: 1) }
+end

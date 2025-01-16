@@ -1,0 +1,14 @@
+<% if @feed_items.any? %>
+  <ol class="microposts">
+    <%= render @feed_items %>
+  </ol>
+  <div class="flex justify-between items-center mt-8">
+  <div class="text-gray-600 ml-2">
+    <%= page_entries_info  @feed_items%>
+  </div>
+  <div class="flex space-x-2 mr-2">
+    <%= will_paginate  @feed_items%>
+  </div>
+</div>
+
+<% end %>

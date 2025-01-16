@@ -1,0 +1,7 @@
+{
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiYellow",
+  "terminal.integrated.fontFamily": "",
+  "editor.cursorStyle": "line-thin",
+  "terminal.integrated.tabs.defaultIcon": "symbol-event"
+}

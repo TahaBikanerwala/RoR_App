@@ -15,6 +15,13 @@ another_test:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+some_test:
+  name: Some User
+  email: some_other@test.com 
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
 <%30.times do |user|%>
 user_<%= user %>:
   name: User <%= user %>
