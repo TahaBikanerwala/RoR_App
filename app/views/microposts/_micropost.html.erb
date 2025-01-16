@@ -1,0 +1,17 @@
+<li id="micropost-<%= micropost.id %>" class="p-4 border-b border-gray-200">
+  <div class="flex items-center">
+    <%= gravatar_for(micropost.user, size: 50, class: "rounded-full mr-4") %>
+    <div>
+      <%= link_to micropost.user.name, micropost.user, class: "text-blue-500 hover:underline font-semibold" %>
+      <p class="text-gray-600"><%= micropost.content %></p>
+      <% if micropost.image.attached? %>
+        <% variant = micropost.image.variant(resize_to_limit: [300, 300]).processed %>
+        <%= image_tag variant, class: "mt-2 rounded-lg shadow-md" %>
+      <% end %>
+      <p class="text-gray-400 text-sm">Posted <%= time_ago_in_words(micropost.created_at) %> ago.</p>
+      <% if current_user?(micropost.user) %>
+       <%= link_to "Delete", micropost, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "text-red-500 hover:underline" %>
+      <% end %>
+    </div>
+  </div>
+</li>
