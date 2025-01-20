@@ -1,0 +1,44 @@
+<% provide(:title, @title) %>
+
+<div class="flex flex-wrap">
+  <aside class="w-full md:w-1/4 p-4">
+    <section class="text-center">
+      <%= gravatar_for @user, size: 100, class: 'mx-auto' %>
+      <div class="mt-4 text-left">
+        <h1 class="text-xl font-bold"><%= @user.name %></h1>
+        <span class="block mt-2">
+          <%= link_to 'View my profile', user_path(@user), class: 'text-blue-500' %>
+        </span>
+        <span class="block mt-2"><b>Microposts:</b> <%= @user.microposts.count %></span>
+      </div>
+    </section>
+    <section class="mt-8">
+      <%= render 'shared/stats' %>
+      <% if @users.any? %>
+        <div class="grid grid-cols-12 gap-0.5 mt-2">
+          <% @users.each do |user| %>
+            <div class="mt-2">
+              <%= link_to gravatar_for(user, size: 20), user %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+  </aside>
+  <div class="w-full md:w-3/4 p-4">
+    <h3 class="text-2xl font-bold"><%= @title %></h3>
+    <% if @users.any? %>
+      <ul class="mt-4">
+        <%= render @users %>
+      </ul>
+      <div class="flex justify-between items-center mt-8">
+        <div class="text-gray-600 ml-2">
+          <%= page_entries_info @posts %>
+        </div>
+        <div class="flex space-x-2 mr-2 pagination">
+          <%= will_paginate %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -3,7 +3,7 @@
   <div>
     <%= link_to user.name, user, class: "text-blue-500 hover:underline" %>
     <% if current_user.admin? && !current_user?(user) %>
-      | <%= link_to 'Delete User?', user, data: { turbo_method: :delete, turbo_confirm: "You sure?" }, class: "text-blue-500 hover:text-red-400" %>
+      | <%= link_to 'Delete?', user, data: { turbo_method: :delete, turbo_confirm: "You sure?" }, class: "text-red-500 hover:underline" %>
     <% end %>
   </div>
 </li>

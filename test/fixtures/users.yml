@@ -7,17 +7,43 @@ test:
   admin: true
   activated: true
   activated_at: <%= Time.zone.now %>
-
+  following: another_test
+  
 another_test:
   name: Another User
   email: test_other@test.com 
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+  following: test
 
 some_test:
   name: Some User
   email: some_other@test.com 
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  following: test
+
+random_test:
+  name: Random User
+  email: random@test.com 
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  following: test
+
+new_test:
+  name: New User
+  email: new_test@test.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  following: test
+
+jack:
+  name: Jack User
+  email: jack@test.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
