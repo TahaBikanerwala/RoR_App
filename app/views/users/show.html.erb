@@ -6,12 +6,13 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <span class="text-blue-500">
-        <%= link_to "view my profile", @user %>
+      <span>
+        <%=render 'shared/stats'%>
       </span>
     </section>
   </aside>
   <div class="w-full md:w-2/3 p-4">
+    <%=render 'follow_form' if logged_in?%>
     <% if @user.microposts.any? %>
     <div class="flex justify-between items-center mt-8">
         <div class="text-gray-600 ml-2">

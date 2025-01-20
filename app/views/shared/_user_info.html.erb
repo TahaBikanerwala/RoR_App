@@ -5,6 +5,7 @@
     <span class="text-gray-600">
       <strong><%= pluralize(current_user.microposts.count, "micropost") %></strong>
     </span>
+    <%= render 'shared/stats' %>
     <div class="mt-2">
       <%= link_to "View my profile", current_user, class: "text-blue-500 hover:underline" %>
     </div>

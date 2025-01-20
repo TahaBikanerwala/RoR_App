@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  follower_id: test
+  followed_id: another_test
+
+two:
+  follower_id: test
+  followed_id: some_test
+
+three:
+  follower_id: another_test
+  followed_id: test
+
+four:
+  follower_id: random_test
+  followed_id: test
+
+five:
+  follower_id: some_test
+  followed_id: test
