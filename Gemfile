@@ -44,7 +44,7 @@ gem "image_processing"
 gem "faker"
 gem "will_paginate" # Pagination
 gem "stringio", "3.1.2"
-gem "active_storage_validations", "~> 1.1", ">= 1.1.4"
+gem "active_storage_validations", "~> 2.0"
 
 
 group :development, :test do
