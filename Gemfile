@@ -43,7 +43,7 @@ gem "thruster", require: false
 gem "image_processing"
 gem "faker"
 gem "will_paginate" # Pagination
-gem "stringio", "3.1.2"
+gem "stringio", "3.1.3"
 gem "active_storage_validations", "~> 1.1", ">= 1.1.4"
 
 
